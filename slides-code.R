@@ -20,10 +20,13 @@ library(dplyr)
 
 # Flattening data.frames ----------------
 # Let's do something silly
+people <- data.frame(names = c('Spencer', 'Jessica', 'Keagan'))
+favorites <- data.frame(
+  food = c('Pizza', 'Pasta', 'salad'), 
+  music = c('Bluegrass', 'Indie', 'Electronic')
+)
 
-
-# Columns of our people data.frame
-
+people$favorites <- favorites
 
 # Flatten it!
-
+flattened <- flatten(people)
